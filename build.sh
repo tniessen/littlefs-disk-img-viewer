@@ -12,8 +12,10 @@ curl --silent "https://unpkg.com/tailwindcss@$tailwindcss_version/dist/tailwind.
 echo "Determining versions"
 viewer_commit=$(git rev-parse --short=8 HEAD)
 viewer_repo=$(git remote get-url origin)
+git -C icons fetch origin --tags
 heroicons_version=$(git -C icons tag --points-at HEAD)
 heroicons_repo=$(git -C icons remote get-url origin)
+git -C src/littlefs fetch origin --tags
 littlefs_version=$(git -C src/littlefs tag --points-at HEAD)
 littlefs_repo=$(git -C src/littlefs remote get-url origin)
 
