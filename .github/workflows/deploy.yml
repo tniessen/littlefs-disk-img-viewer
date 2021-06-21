@@ -15,13 +15,13 @@ jobs:
           submodules: recursive
       - name: Install wasi-sdk
         run: |
-          wget 'https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-12/wasi-sdk-12.0-linux.tar.gz'
+          wget --no-verbose 'https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-12/wasi-sdk-12.0-linux.tar.gz'
           tar xf wasi-sdk-12.0-linux.tar.gz
           rm wasi-sdk-12.0-linux.tar.gz
           echo "$(pwd)/wasi-sdk-12.0/bin" >> $GITHUB_PATH
       - name: Install binaryen
         run: |
-          wget 'https://github.com/WebAssembly/binaryen/releases/download/version_101/binaryen-version_101-x86_64-linux.tar.gz'
+          wget --no-verbose 'https://github.com/WebAssembly/binaryen/releases/download/version_101/binaryen-version_101-x86_64-linux.tar.gz'
           tar xf binaryen-version_101-x86_64-linux.tar.gz
           rm binaryen-version_101-x86_64-linux.tar.gz
           echo "$(pwd)/binaryen-version_101/bin" >> $GITHUB_PATH
