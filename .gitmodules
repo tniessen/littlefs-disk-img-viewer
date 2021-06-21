@@ -1,0 +1,6 @@
+[submodule "src/littlefs"]
+	path = src/littlefs
+	url = https://github.com/littlefs-project/littlefs.git
+[submodule "icons"]
+	path = icons
+	url = https://github.com/tailwindlabs/heroicons.git
