@@ -69,9 +69,9 @@ echo "Generating app-resources.js"
   done
   echo "  },"
   echo "  icons: {"
-  for icon in outline/database outline/download outline/folder outline/folder-open outline/information-circle outline/tag solid/document; do
+  for icon in outline/arrow-down-tray outline/circle-stack outline/folder outline/folder-open outline/information-circle outline/tag solid/document; do
     echo -n "    '$icon': \`"
-    cat "icons/optimized/$icon.svg"
+    cat "icons/optimized/24/$icon.svg"
     echo "\`,"
   done
   echo "  }"
