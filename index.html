@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>littlefs disk image viewer</title>
+    <meta charset="utf-8">
+    <link href="tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="overflow-y-scroll">
+    <div class="container mx-auto px-2">
+      <div class="flex justify-between items-center my-4">
+        <h1 class="text-xl my-2">littlefs disk image viewer</h1>
+        <a href="#" id="about-button">About</a>
+      </div>
+      <div id="setup-box">
+        <div class="rounded border p-8">
+          <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 text-sm">
+            <label for="img-block-size-input" class="text-right">Block size:</label>
+            <input type="number" id="img-block-size-input" class="border text-right">
+            <label for="img-block-count-input" class="text-right">Block count:</label>
+            <input type="number" id="img-block-count-input" class="border text-right" placeholder="Auto">
+            <label for="img-read-size-input" class="text-right">Read size:</label>
+            <input type="number" id="img-read-size-input" class="border text-right" placeholder="Auto">
+            <label for="img-cache-size-input" class="text-right">Cache size:</label>
+            <input type="number" id="img-cache-size-input" class="border text-right" placeholder="Auto">
+            <label for="img-lookahead-size-input" class="text-right">Lookahead size:</label>
+            <input type="number" id="img-lookahead-size-input" class="border text-right" placeholder="Auto">
+            <label for="max-cached-blocks-input" class="text-right">Cache blocks:</label>
+            <input type="number" id="max-cached-blocks-input" class="border text-right" placeholder="Auto">
+          </div>
+          <div class="text-center mt-10 mb-4">
+            <label for="img-file-input" class="bg-blue-600 text-white py-2 px-4 border shadow-lg text-lg uppercase">Open disk image</label>
+            <input type="file" id="img-file-input" class="opacity-0 w-px h-px">
+          </div>
+        </div>
+      </div>
+      <div id="content"></div>
+      <script type="application/javascript" src="app-resources.js"></script>
+      <script type="application/javascript" src="lib/ui.js"></script>
+      <script type="application/javascript" src="lib/lfs-reader.js"></script>
+      <script type="application/javascript" src="lib/main.js"></script>
+    </div>
+  </body>
+</html>
